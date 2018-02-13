@@ -48,7 +48,7 @@ class SignupForm extends React.Component {
 		const { data, loading, errors } = this.state;
 		return (
 			<Form onSubmit={this.onSubmit} loading={loading}>
-				<Form.Field errors={!!errors.email}>
+				<Form.Field errors={errors.email ? !!errors.email : undefined}>
 					<label htmlFor="email">Email</label>
 					<input
 						type="text"
@@ -61,7 +61,9 @@ class SignupForm extends React.Component {
 					{errors.email && <InlineError text={errors.email} />}
 				</Form.Field>
 
-				<Form.Field errors={!!errors.password}>
+				<Form.Field
+					errors={errors.password ? !!errors.password : undefined}
+				>
 					<label htmlFor="password">Password</label>
 					<input
 						type="password"
@@ -81,7 +83,7 @@ class SignupForm extends React.Component {
 }
 
 SignupForm.propTypes = {
-	subimt: PropTypes.func.isRequired
+	submit: PropTypes.func.isRequired
 };
 
 export default SignupForm;
