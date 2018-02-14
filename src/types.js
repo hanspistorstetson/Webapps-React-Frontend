@@ -1,2 +1,8 @@
-export const USER_LOGGED_IN  = "USER_LOGGED_IN";
+export const USER_LOGGED_IN = "USER_LOGGED_IN";
 export const USER_LOGGED_OUT = "USER_LOGGED_OUT";
+
+// GAMES
+
+export const GAMES_FETCHED = "GAMES_FETCHED";
+export const GAME_CREATED = "GAME_CREATED";
+export const GAME_FETCHED = "GAME_FETCHED";

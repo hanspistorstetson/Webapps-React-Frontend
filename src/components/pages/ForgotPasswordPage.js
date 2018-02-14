@@ -3,7 +3,7 @@ import { Message } from "semantic-ui-react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import ForgotPasswordForm from "../forms/ForgotPasswordForm";
-import resetPasswordRequest from "../../actions/auth";
+import { resetPasswordRequest } from "../../actions/auth";
 
 class ForgotPasswordPage extends React.Component {
   state = {
@@ -13,7 +13,7 @@ class ForgotPasswordPage extends React.Component {
   submit = data =>
     this.props
       .resetPasswordRequest(data)
-      .then(() => this.setState({ request: true }));
+      .then(() => this.setState({ success: true }));
 
   render() {
     return (
